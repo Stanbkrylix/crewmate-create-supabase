@@ -4,3 +4,17 @@
     padding: 2rem;
     text-align: center;
 }
+
+.main-container {
+    display: flex;
+    gap: 1rem;
+}
+.menu-container {
+    border: 1px solid white;
+    padding: 0 1rem;
+}
+.card {
+    display: flex;
+    border: 1px solid white;
+    flex-direction: column;
+}

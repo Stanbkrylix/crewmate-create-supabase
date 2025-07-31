@@ -17,8 +17,14 @@ function App() {
         setDataArray((prev) => [...prev, data]);
         console.log(dataArray);
     }
-    function updateData(id) {
+    function updateData(id, editObject) {
         console.log(id);
+        console.log(editObject);
+        setDataArray((prev) =>
+            prev.map((item) =>
+                item.id === id ? { ...item, ...editObject } : item
+            )
+        );
     }
 
     function deleteData(id) {

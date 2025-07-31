@@ -46,9 +46,10 @@ function CardGallery({ item, updateData, deleteData }) {
         setEditMode(true);
     }
 
-    function handleConfirm() {
-        updateData(item.id, editObject);
-        setEditMode(!editMode);
+    async function handleConfirm() {
+        const success = await updateData(item.id, editObject);
+        console.log(success);
+        if (success) setEditMode(!editMode);
     }
 
     return (
@@ -68,8 +69,13 @@ function CardGallery({ item, updateData, deleteData }) {
                             Edit
                         </button>
                         <button
-                            className="edit-btn"
-                            onClick={() => deleteData(item.id)}
+                            className="delete-btn"
+                            onClick={async () => {
+                                const confirmed = await deleteData(item.id);
+                                if (!confirmed) {
+                                    alert("Failed to delete");
+                                }
+                            }}
                         >
                             Delete
                         </button>

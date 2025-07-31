@@ -12,9 +12,43 @@
 .menu-container {
     border: 1px solid white;
     padding: 0 1rem;
+    width: 20%;
+}
+
+.page-container {
+    width: 78%;
+}
+
+/* Home */
+.home {
+    height: 100vh;
+}
+
+/* Create container */
+.create-container {
+    margin: auto 0;
+    width: 100%;
+}
+.create-card-container {
+    /* margin: auto 0; */
+    height: 100vh;
 }
 .card {
     display: flex;
     border: 1px solid white;
     flex-direction: column;
+    padding: 1rem 0;
+    width: 300px;
+    /* align-content: center; */
+    align-items: center;
+    margin: 0 auto;
+    gap: 0.5rem;
+}
+.create-btn {
+    cursor: pointer;
+}
+
+/* Gallery */
+.gallery {
+    height: 100vh;
 }

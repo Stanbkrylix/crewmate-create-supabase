@@ -8,15 +8,36 @@ import "./App.css";
 // import
 
 function App() {
-    const [countArray, setCountArray] = useState([]);
+    const [dataArray, setDataArray] = useState([]);
+    function handleData() {
+        console.log(dataArray);
+    }
+
+    function addDataArray(data) {
+        setDataArray((prev) => [...prev, data]);
+        console.log(dataArray);
+    }
 
     return (
         <BrowserRouter>
             <Routes>
                 <Route element={<Layout menu={<Menu />} />}>
                     <Route path="/" element={<Home />} />
-                    <Route path="/creation" element={<Creation />} />
-                    <Route path="/gallery" element={<Gallery />} />
+                    <Route
+                        path="/creation"
+                        element={
+                            <Creation
+                                data={dataArray}
+                                addDataArray={addDataArray}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/gallery"
+                        element={
+                            <Gallery data={dataArray} handleData={handleData} />
+                        }
+                    />
                     {/* <Route path="/recipe/:id" element={<FoodRecipe />} /> */}
                     <Route path="*" element={<div>Not Found</div>} />
                 </Route>

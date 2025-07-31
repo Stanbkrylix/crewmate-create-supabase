@@ -17,6 +17,13 @@ function App() {
         setDataArray((prev) => [...prev, data]);
         console.log(dataArray);
     }
+    function updateData(id) {
+        console.log(id);
+    }
+
+    function deleteData(id) {
+        setDataArray((prev) => prev.filter((item) => item.id !== id));
+    }
 
     return (
         <BrowserRouter>
@@ -35,7 +42,11 @@ function App() {
                     <Route
                         path="/gallery"
                         element={
-                            <Gallery data={dataArray} handleData={handleData} />
+                            <Gallery
+                                data={dataArray}
+                                updateData={updateData}
+                                deleteData={deleteData}
+                            />
                         }
                     />
                     {/* <Route path="/recipe/:id" element={<FoodRecipe />} /> */}

@@ -18,8 +18,13 @@ function Creation({ data, addDataArray }) {
             return;
         }
 
-        addDataArray(inputObject);
-        setInputObject({ name: "", age: "", gender: "" });
+        const newCrew = { ...inputObject, id: crypto.randomUUID() };
+        addDataArray(newCrew);
+        setInputObject({
+            name: "",
+            age: "",
+            gender: "",
+        });
     }
 
     return (

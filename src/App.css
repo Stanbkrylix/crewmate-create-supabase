@@ -1,77 +1,90 @@
 #root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 .main-container {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 .menu-container {
-    border: 1px solid white;
-    padding: 0 1rem;
-    width: 20%;
+  border: 1px solid white;
+  padding: 0 1rem;
+  width: 20%;
 }
 
 .page-container {
-    width: 78%;
+  width: 78%;
 }
 
 /* Home */
 .home {
-    height: 100vh;
+  height: 100vh;
+  /* width: ; */
+}
+.image-div {
+  /* width: 100%; */
+}
+img {
+  width: 100%;
 }
 
 /* Create container */
 .create-container {
-    margin: auto 0;
-    width: 100%;
+  margin: auto 0;
+  width: 100%;
 }
 .create-card-container {
-    /* margin: auto 0; */
-    height: 100vh;
+  /* margin: auto 0; */
+  height: 100vh;
 }
 .card {
-    display: flex;
-    border: 1px solid white;
-    flex-direction: column;
-    padding: 1rem 0;
-    width: 300px;
-    /* align-content: center; */
-    align-items: center;
-    margin: 0 auto;
-    gap: 0.5rem;
+  display: flex;
+  border: 1px solid white;
+  flex-direction: column;
+  padding: 1rem 0;
+  width: 300px;
+  /* align-content: center; */
+  align-items: center;
+  margin: 0 auto;
+  gap: 0.5rem;
 }
 .create-btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 /* Gallery */
 .gallery-container {
-    height: 100vh;
-    border: 1px solid white;
-    padding: 0.5rem;
+  height: 100vh;
+  border: 1px solid white;
+  padding: 0.5rem;
 }
 .gallery-cards-container {
-    border-top: 1px solid white;
-    padding: 0.5rem;
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+  border-top: 1px solid white;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 .gallery-card {
-    border: 1px solid white;
-    width: 180px;
-    padding: 0.3rem;
-    height: 200px;
+  border: 1px solid white;
+  width: 180px;
+  padding: 0.3rem;
+  height: 200px;
 }
 .btn-divs {
-    display: flex;
-    justify-content: center;
-    gap: 0.3rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
 }
 .btn-divs button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+/* Edit card */
+.edit-card {
+  display: flex;
+  flex-direction: column;
 }
